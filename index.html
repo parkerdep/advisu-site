@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advisu | Strategic Advisory Services</title>
+<meta name="description" content="Advisu provides strategic advisory services across accounting, board advisory and investing.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0a5cff;--deep:#0535b8;--navy:#07173f;--mint:#2ef0c0;--cyan:#19d3ff;--ink:#0d1b3d;--mute:#56648a;--bg:#f5f8ff;--line:#e0e8fa}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav img{height:44px}
+.nav ul{display:flex;gap:30px;list-style:none;font-size:15px;font-weight:500}
+.nav ul a:hover{color:var(--blue)}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:600;font-size:15px;transition:.2s;border:2px solid transparent;cursor:pointer}
+.btn-p{background:var(--blue);color:#fff}.btn-p:hover{background:var(--deep)}
+.btn-w{background:#fff;color:var(--deep)}.btn-w:hover{background:var(--mint)}
+.btn-o{border-color:rgba(255,255,255,.7);color:#fff}.btn-o:hover{background:rgba(255,255,255,.15)}
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(135deg,#0a5cff 0%,#0535b8 100%);padding:110px 0 120px}
+.hero:before{content:"";position:absolute;z-index:1;right:-140px;top:-160px;width:560px;height:560px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--mint));opacity:.55;animation:float 14s ease-in-out infinite}
+.hero:after{content:"";position:absolute;z-index:1;left:-180px;bottom:-260px;width:520px;height:520px;border-radius:50%;border:34px solid rgba(46,240,192,.35);animation:float 18s ease-in-out infinite reverse}
+.vid{position:absolute;inset:0;z-index:0}
+.vid video{width:100%;height:100%;object-fit:cover}
+.vid:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,92,255,.62),rgba(5,53,184,.80))}
+@keyframes float{0%,100%{transform:translate(0,0)}50%{transform:translate(-26px,22px)}}
+@media(prefers-reduced-motion:reduce){.hero:before,.hero:after{animation:none}}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+.tag{display:inline-block;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mint);margin-bottom:18px}
+h1{font-size:clamp(24px,3.5vw,46px);line-height:1.2;font-weight:700;margin-bottom:22px}
+h1 span{display:block;white-space:nowrap}
+.hero p{font-size:18px;max-width:540px;opacity:.95;margin-bottom:34px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap}
+.card-art{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:28px;padding:34px;backdrop-filter:blur(8px)}
+.card-art li{list-style:none;display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2);font-weight:600;font-size:18px}
+.card-art li:last-child{border:0}
+.card-art i{width:12px;height:12px;border-radius:50%;background:var(--mint);flex:none}
+section{padding:96px 0}
+.alt{background:var(--bg)}
+.head{max-width:640px;margin-bottom:52px}
+.head .tag{color:var(--blue)}
+h2{font-size:clamp(28px,3.6vw,40px);line-height:1.2;font-weight:700;margin-bottom:14px}
+.head p{color:var(--mute);font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.svc{background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px 32px;transition:.25s}
+.svc:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(10,92,255,.14)}
+.ico{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;margin-bottom:24px}
+.ico svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:22px;margin-bottom:10px}
+.svc p{color:var(--mute);font-size:15.5px;margin-bottom:18px}
+.svc ul{list-style:none;font-size:15px}
+.svc li{padding:6px 0 6px 26px;position:relative}
+.svc li:before{content:"";position:absolute;left:0;top:14px;width:10px;height:10px;border-radius:50%;background:var(--mint)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p{color:var(--mute);margin-bottom:18px;font-size:17px}
+.art{aspect-ratio:1/1;border-radius:32px;position:relative;overflow:hidden;background:linear-gradient(145deg,var(--blue),var(--deep))}
+.art b{position:absolute;border-radius:50%}
+.art b:nth-child(1){width:70%;height:70%;right:-18%;top:-14%;background:linear-gradient(135deg,var(--cyan),var(--mint))}
+.art b:nth-child(2){width:55%;height:55%;left:-14%;bottom:-12%;border:26px solid rgba(46,240,192,.4)}
+.art b:nth-child(3){width:90px;height:90px;left:44%;top:40%;background:var(--mint)}
+.art span{position:absolute;left:28px;bottom:28px;right:28px;background:#fff;border-radius:18px;padding:20px 24px;font-weight:600;color:var(--deep);box-shadow:0 14px 30px rgba(5,53,184,.25)}
+.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.val{padding:30px 26px;border-radius:20px;background:#fff;border:1px solid var(--line)}
+.val strong{display:block;font-size:34px;color:var(--blue);line-height:1;margin-bottom:12px}
+.val h4{font-size:18px;margin-bottom:6px}
+.val p{font-size:14.5px;color:var(--mute)}
+.cta{background:linear-gradient(135deg,var(--blue),var(--deep));color:#fff;border-radius:32px;padding:70px 40px;text-align:center;position:relative;overflow:hidden}
+.cta:before{content:"";position:absolute;right:-90px;top:-90px;width:300px;height:300px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--mint));opacity:.85}
+.cta>*{position:relative}
+.cta p{max-width:560px;margin:0 auto 30px;font-size:17px;opacity:.95}
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:60px}
+.contact dl{margin-top:26px}
+.contact dt{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.contact dd{margin-bottom:20px;font-size:17px}
+form{display:grid;gap:16px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px}
+input,select,textarea{font:inherit;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;width:100%;color:var(--ink);background:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+textarea{min-height:120px;resize:vertical}
+form .btn{border:0;justify-self:start}
+footer{background:var(--navy);color:#b9c4e4;padding:60px 0 30px;font-size:14.5px}
+.foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:34px}
+.foot img{height:44px;margin-bottom:14px}
+.foot ul{list-style:none}.foot li{padding:3px 0}.foot a:hover{color:var(--mint)}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:13px}
+@media(max-width:900px){.hero .wrap,.about,.contact{grid-template-columns:1fr}.grid3,.vals{grid-template-columns:1fr 1fr}.nav ul{display:none}.hero{padding:80px 0}section{padding:70px 0}.art{max-width:420px}}
+@media(max-width:600px){.grid3,.vals{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="#top"><img src="assets/logo.png" alt="Advisu"></a>
+<ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#approach">Approach</a></li><li><a href="#contact">Contact</a></li></ul>
+<a class="btn btn-p" href="#contact">Get in touch</a>
+</div></header>
+
+<main id="top">
+<div class="hero">
+<div class="vid"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="assets/hero.mp4" type="video/mp4"></video></div>
+<div class="wrap">
+<div>
+<span class="tag">Strategic Advisory Services</span>
+<h1><span>Clear numbers.</span><span>Sharper strategy.</span><span>Confident decisions.</span></h1>
+<p>Advisu helps founders, boards and investors turn financial insight into lasting growth, with accounting, board advisory and investing under one roof.</p>
+<div class="btns"><a class="btn btn-w" href="#contact">Book a consultation</a><a class="btn btn-o" href="#services">Explore services</a></div>
+</div>
+<ul class="card-art"><li><i></i>Accounting</li><li><i></i>Board Advisory</li><li><i></i>Investing</li></ul>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="head"><span class="tag">What we do</span><h2>Three core services, one connected strategy</h2><p>Each service stands on its own and works even better together, so your finances, governance and capital decisions all point the same way.</p></div>
+<div class="grid3">
+<article class="svc"><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h3M13 12h3M8 16h3M13 16h3"/></svg></div>
+<h3>Accounting</h3><p>Accurate, timely records and reporting you can rely on for every decision.</p>
+<ul><li>Bookkeeping and reconciliation</li><li>Management reporting</li><li>Tax-ready financials</li></ul></article>
+<article class="svc"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></div>
+<h3>Board Advisory</h3><p>Experienced counsel for leadership teams that want stronger governance and direction.</p>
+<ul><li>Strategy and growth planning</li><li>Governance and oversight</li><li>Performance and risk review</li></ul></article>
+<article class="svc"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg></div>
+<h3>Investing</h3><p>Disciplined investment guidance aligned to your goals and appetite for risk.</p>
+<ul><li>Portfolio strategy</li><li>Opportunity evaluation</li><li>Long-term capital planning</li></ul></article>
+</div></div></section>
+
+<section id="about" class="alt"><div class="wrap about">
+<div class="art"><b></b><b></b><b></b><span>Strategy built on clear financial insight</span></div>
+<div>
+<span class="tag" style="color:var(--blue)">About Advisu</span>
+<h2>Advisors who stay close to your business</h2>
+<p>Advisu brings financial discipline and strategic thinking together. We work alongside leaders to understand the numbers, shape the plan and follow through on it.</p>
+<p>Our approach is practical and transparent. You get straight answers and a plan that fits where your business is heading.</p>
+<a class="btn btn-p" href="#contact">Talk to our team</a>
+</div></div></section>
+
+<section id="approach"><div class="wrap">
+<div class="head"><span class="tag">Our approach</span><h2>How we work with you</h2></div>
+<div class="vals">
+<div class="val"><strong>01</strong><h4>Listen</h4><p>We start by learning your goals, challenges and current position.</p></div>
+<div class="val"><strong>02</strong><h4>Analyse</h4><p>We review your financials and structure to find the real opportunities.</p></div>
+<div class="val"><strong>03</strong><h4>Advise</h4><p>You receive a clear, prioritised plan with practical next steps.</p></div>
+<div class="val"><strong>04</strong><h4>Support</h4><p>We stay involved as you put the plan into action and adapt it.</p></div>
+</div></div></section>
+
+<section class="alt" style="padding:70px 0"><div class="wrap"><div class="cta">
+<h2>Ready to make your next decision with confidence?</h2>
+<p>Book a conversation with Advisu and find out how strategic advisory can support your goals.</p>
+<a class="btn btn-w" href="#contact">Book a consultation</a>
+</div></div></section>
+
+<section id="contact"><div class="wrap contact">
+<div><span class="tag" style="color:var(--blue);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Contact</span>
+<h2>Let’s start a conversation</h2>
+<p style="color:var(--mute)">Tell us a little about your needs and we’ll get back to you.</p>
+<dl><dt>Email</dt><dd><a href="mailto:david@dvisu.com">david@dvisu.com</a></dd>
+<dt>Telephone</dt><dd>UK: <a href="tel:+447572742320">+44 7572 742320</a><br>US: <a href="tel:+14082026997">+1 408 202 6997</a></dd>
+<dt>Services</dt><dd>Accounting · Board Advisory · Investing</dd></dl></div>
+<form id="f" onsubmit="return send(event)">
+<input id="n" required placeholder="Your name" aria-label="Your name">
+<input id="e" type="email" required placeholder="Email address" aria-label="Email">
+<select id="s" aria-label="Service"><option>Accounting</option><option>Board Advisory</option><option>Investing</option><option>Not sure yet</option></select>
+<textarea id="m" required placeholder="How can we help?" aria-label="Message"></textarea>
+<button class="btn btn-p" type="submit">Send message</button>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="foot">
+<div><img src="assets/logo.png" alt="Advisu"><p>Strategic Advisory Services</p><p style="margin-top:10px"><a href="mailto:david@dvisu.com">david@dvisu.com</a><br><a href="tel:+447572742320">UK +44 7572 742320</a> · <a href="tel:+14082026997">US +1 408 202 6997</a></p></div>
+<ul><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#approach">Approach</a></li><li><a href="#contact">Contact</a></li></ul>
+<ul><li>Accounting</li><li>Board Advisory</li><li>Investing</li></ul>
+</div>
+<div class="copy">© <span id="y">2026</span> Advisu. All rights reserved.</div>
+</div></footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+function send(ev){ev.preventDefault();
+var b=encodeURIComponent('Name: '+n.value+'\nEmail: '+e.value+'\nService: '+s.value+'\n\n'+m.value);
+location.href='mailto:david@dvisu.com?subject='+encodeURIComponent('Website enquiry: '+s.value)+'&body='+b;return false}
+</script>
+</body>
+</html>
